@@ -20,7 +20,7 @@ import java.util.HashMap;
  * language as opposed to C (The C solution for this is literally like 8x more complex).
  *
  * Place your @author tags here.
- * @author First Last : netid@iastate.edu
+ * @author Jeffrey Marsh : jjmarsh@iastate.edu
  * @author ...
  * @author ...
  * @author Riley Lawson : rjlawson@iastate.edu
@@ -33,7 +33,7 @@ public class DecryptorSkeleton {
                 1001100, 1101011, 1011101, 1, 1100, 1011101, 11010, 111, 111010
         };
 
-        convertBinaryArrayToDecimalArray(toDecrypt);
+        toDecrypt =  convertBinaryArrayToDecimalArray(toDecrypt);
         System.out.println(Arrays.toString(toDecrypt)); // As a check, the first value will be 41 and the last is 58.
 
         shiftArrayValues(toDecrypt);
@@ -57,10 +57,14 @@ public class DecryptorSkeleton {
      *
      * @param toDecrypt - The array to be decoded.
      */
-    public static void convertBinaryArrayToDecimalArray(int[] toDecrypt) {
-        // TODO
+    public static int[] convertBinaryArrayToDecimalArray(int[] toDecrypt) {
+    	int[] working = new int[toDecrypt.length];
+    	for (int i = 0; i < toDecrypt.length; i++) {
+    		String binaryString = Integer.toString(toDecrypt[i]);
+    		working[i] = Integer.parseInt(binaryString, 2);
+    	}
+    	return working;
     }
-
 
     /**
      * STEP 2: COMPLETE THIS METHOD. ONCE COMPLETED, HAVE THE TEAM MEMBER
@@ -77,7 +81,7 @@ public class DecryptorSkeleton {
      * @param toDecrypt - The array to be decoded.
      */
     public static void shiftArrayValues(int[] toDecrypt) {
-<<<<<<< HEAD
+
         for (int i=0; i =< toDecrypt.length; i++){
         	if (toDecrypt[i]%3==0){
         		toDecrypt[i] -= 1;
@@ -89,10 +93,7 @@ public class DecryptorSkeleton {
         		toDecrypt[i] -= 3;
         	}
         }
-=======
-        // TODO
-    	
->>>>>>> 9f32ddc186b0e15442ea1e230b818be9d9263fef
+
     }
 
     /**
@@ -108,10 +109,10 @@ public class DecryptorSkeleton {
      */
     public static void divideArrayValues(int[] toDecrypt) {
         // TODO
-    	for(int i = 0; i < toDecrypt; i++){
+    	for(int i = 0; i < toDecrypt.length; i++){
     		toDecrypt[i] = toDecrypt[i]/5;
     	}
-    	
+
     }
 
 
