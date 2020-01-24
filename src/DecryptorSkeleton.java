@@ -79,7 +79,17 @@ public class DecryptorSkeleton {
     public static void shiftArrayValues(int[] toDecrypt) {
         // TODO
     }
-
+    for (int i=0; i =< toDecrypt.length; i++){
+    	if (toDecrypt[i]%3==0){
+    		toDecrypt[i] -= 1;
+    	}
+    	else if (toDecrypt[i]%3==1){
+    		toDecrypt[i] -= 2;
+    	}
+    	else{
+    		toDecrypt[i] -= 3;
+    	}
+    }
 
     /**
      * STEP 3: COMPLETE THIS METHOD. ONCE COMPLETED, HAVE THE TEAM MEMBER
