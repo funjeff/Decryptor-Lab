@@ -78,6 +78,9 @@ public class DecryptorSkeleton {
      */
     public static void shiftArrayValues(int[] toDecrypt) {
         // TODO
+    	for(int i = 0; i < numofvar; i++){
+    		int[i] = int[i]/5;
+    	}
     }
 
 
@@ -94,6 +97,7 @@ public class DecryptorSkeleton {
      */
     public static void divideArrayValues(int[] toDecrypt) {
         // TODO
+    	
     }
 
 
