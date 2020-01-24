@@ -77,18 +77,17 @@ public class DecryptorSkeleton {
      * @param toDecrypt - The array to be decoded.
      */
     public static void shiftArrayValues(int[] toDecrypt) {
-        // TODO
-    }
-    for (int i=0; i =< toDecrypt.length; i++){
-    	if (toDecrypt[i]%3==0){
-    		toDecrypt[i] -= 1;
-    	}
-    	else if (toDecrypt[i]%3==1){
-    		toDecrypt[i] -= 2;
-    	}
-    	else{
-    		toDecrypt[i] -= 3;
-    	}
+        for (int i=0; i =< toDecrypt.length; i++){
+        	if (toDecrypt[i]%3==0){
+        		toDecrypt[i] -= 1;
+        	}
+        	else if (toDecrypt[i]%3==1){
+        		toDecrypt[i] -= 2;
+        	}
+        	else{
+        		toDecrypt[i] -= 3;
+        	}
+        }
     }
 
     /**
