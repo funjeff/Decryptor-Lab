@@ -23,7 +23,7 @@ import java.util.HashMap;
  * @author First Last : netid@iastate.edu
  * @author ...
  * @author ...
- * @author ...
+ * @author Riley Lawson : rjlawson@iastate.edu
  */
 public class DecryptorSkeleton {
     public static void main(String[] args) {
@@ -146,7 +146,12 @@ public class DecryptorSkeleton {
         StringBuilder solution = new StringBuilder();
 
         // TODO
-
+        
+        for(int i = 0; i < toDecrypt.length; i++){
+        	solution.append(cypher.get(toDecrypt[i]));
+        }
+        	
+        	
         solution.append('!');
         return solution.toString();
     }
